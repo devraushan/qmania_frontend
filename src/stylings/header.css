@@ -1,0 +1,43 @@
+header{
+    display: grid;
+    grid-template-areas: "a b b b b b b b b b b b b b b b"
+    "a d d d d d d d d d d d d d d d";
+    background-color: green;
+    height: 200px;
+    width: 100vw;
+  }
+  header>.icon{
+    grid-area: a;
+    justify-self: center;
+    align-self: center;
+    margin-left: 30px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50px;
+  }
+  header>.heading{
+    align-self: end;
+    margin: 0;
+    color: antiquewhite;
+    grid-area: b;
+  }
+  header>.subheading{
+    margin-top: 0;
+    color: aqua;
+    align-self: start;
+    grid-area: d;
+  }
+
+  @media only screen and (max-width: 600px) {
+    header {
+      grid-template-areas: "a a a a a"
+      "b b b b b"
+      "d d d d d";
+      justify-items: center;
+    }
+  header>.icon{
+    margin-top: 10px;
+    justify-self: center;
+    align-self: center;
+  }
+  }
